@@ -1,12 +1,9 @@
 import React from "react";
 import { Container } from "./content-styles";
+import props from "../../interfaces/props";
 
-const Content: React.FC = () => {
-  return (
-    <Container>
-      <h1>Content</h1>
-    </Container>
-  );
+const Content: React.FC<props> = ({ children }) => {
+  return <Container>{children}</Container>;
 };
 
 export default Content;
