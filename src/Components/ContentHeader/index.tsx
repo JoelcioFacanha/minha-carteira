@@ -1,16 +1,14 @@
 import React from "react";
 import { Container, TitleContainer, Controllers } from "./contentHeader-styles";
+import { IContentHeaderProps } from "../../interfaces/IContentHeaderProps";
 
-const ContentHeader: React.FC = () => {
+const ContentHeader: React.FC<IContentHeaderProps> = ({ title, children }) => {
   return (
     <Container>
-      <TitleContainer>
-        <h1>Titulo</h1>
+      <TitleContainer title={title}>
+        <h1>{title}</h1>
       </TitleContainer>
-      <Controllers>
-        <button type="button">Botão 01</button>
-        <button type="button">Botão 02</button>
-      </Controllers>
+      <Controllers>{children}</Controllers>
     </Container>
   );
 };

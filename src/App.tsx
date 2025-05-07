@@ -2,14 +2,15 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
 import Layout from "./Components/Layout";
 import dark from "./styles/themes/dark";
-import Dashboard from "./Pages/Dashboard";
+import { RouterProvider } from "react-router-dom";
+import { AppRoutes } from "./routes/app.route";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={dark}>
       <GlobalStyles />
       <Layout>
-        <Dashboard />
+        <RouterProvider router={AppRoutes} />
       </Layout>
     </ThemeProvider>
   );

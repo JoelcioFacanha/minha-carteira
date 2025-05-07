@@ -3,7 +3,7 @@ import MainHeader from "../MainHeader";
 import Aside from "../Aside";
 import Content from "../Content";
 import { Grid } from "./layout-styles";
-import props from "../../interfaces/props";
+import props from "../../interfaces/IProps";
 
 const Layout: React.FC<props> = ({ children }) => {
   return (
