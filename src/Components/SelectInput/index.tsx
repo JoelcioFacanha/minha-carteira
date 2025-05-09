@@ -1,14 +1,17 @@
 import React from "react";
 import { Container } from "./selectInput-styles";
 import { ISelectInputOptions } from "../../interfaces/ISelectInputOptions";
-//import props from "../../interfaces/props";
 
-const SelectInput: React.FC<ISelectInputOptions> = ({ options }) => {
+const SelectInput: React.FC<ISelectInputOptions> = (props) => {
   return (
     <Container>
-      <select>
-        {options.map((op) => {
-          return <option value={op.value}>{op.text}</option>;
+      <select onChange={props.onChange} defaultValue={props.defaultValue}>
+        {props.options.map((op, index) => {
+          return (
+            <option key={index} value={op.value}>
+              {op.text}
+            </option>
+          );
         })}
       </select>
     </Container>

@@ -33,6 +33,12 @@ export const Container = styled.li`
     justify-content: space-between;
 
     padding-left: 10px;
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  > div span {
+    font-size: 16px;
+    font-weight: 500;
   }
 `;
 
