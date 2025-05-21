@@ -53,7 +53,7 @@ export default [
     amount: "2500.15",
     type: "entrada",
     frequency: "recorrente",
-    date: "2020-05-10",
+    date: "2025-05-10",
   },
   {
     description: "Salário",
