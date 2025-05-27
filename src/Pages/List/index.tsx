@@ -40,6 +40,24 @@ const List: React.FC = () => {
     }
   };
 
+  const handleMonthSelected = (month: string) => {
+    try {
+      const parseMonth = Number(month);
+      setMonthSelected(parseMonth);
+    } catch {
+      throw new Error("Mês invalido!");
+    }
+  };
+
+  const handleYearSelected = (year: string) => {
+    try {
+      const parseYear = Number(year);
+      setYearSelected(parseYear);
+    } catch {
+      throw new Error("Ano inválido!");
+    }
+  };
+
   useEffect(() => {
     const { listData } = pageData;
     const filterData = listData.filter((item) => {
@@ -137,12 +155,12 @@ const List: React.FC = () => {
         </Filters>
         <SelectInput
           options={months}
-          onChange={(event) => setMonthSelected(Number(event.target.value))}
+          onChange={(event) => handleMonthSelected(event.target.value)}
           defaultValue={monthSelected}
         />
         <SelectInput
           options={years}
-          onChange={(event) => setYearSelected(Number(event.target.value))}
+          onChange={(event) => handleYearSelected(event.target.value)}
           defaultValue={yearSelected}
         />
       </ContentHeader>

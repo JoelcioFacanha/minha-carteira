@@ -39,10 +39,10 @@ export const Controllers = styled.div`
 function getColorLine(title: string, theme: DefaultTheme) {
   switch (title) {
     case "Entradas":
-      return theme.colors.info;
+      return theme.colors.success;
     case "Saídas":
       return theme.colors.warning;
     default:
-      return theme.colors.gray;
+      return theme.colors.info;
   }
 }
