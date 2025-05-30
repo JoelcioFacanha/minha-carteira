@@ -25,21 +25,21 @@ export default [
     amount: "900.23",
     type: "entrada",
     frequency: "eventual",
-    date: "2021-02-21",
+    date: "2020-02-21",
   },
   {
     description: "Freela app",
     amount: "950.92",
     type: "entrada",
     frequency: "eventual",
-    date: "2021-02-23",
+    date: "2020-02-23",
   },
   {
     description: "Salário",
     amount: "2500.25",
     type: "entrada",
     frequency: "recorrente",
-    date: "2020-03-10",
+    date: "2025-03-10",
   },
   {
     description: "Salário",
@@ -53,7 +53,7 @@ export default [
     amount: "2500.15",
     type: "entrada",
     frequency: "recorrente",
-    date: "2025-05-10",
+    date: "2020-05-10",
   },
   {
     description: "Salário",
